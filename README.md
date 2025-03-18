@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+# IIG-HEC Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB.svg?logo=react)
+![Firebase](https://img.shields.io/badge/Firebase-10.3.1-FFCA28.svg?logo=firebase)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-38B2AC.svg?logo=tailwind-css)
+![Node.js](https://img.shields.io/badge/Node.js-18.x-339933.svg?logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248.svg?logo=mongodb)
+![Express.js](https://img.shields.io/badge/Express.js-4.x-000000.svg?logo=express)
+![MERN Stack](https://img.shields.io/badge/MERN-Stack-green.svg)
 
-## Available Scripts
+A modern, responsive website built on the MERN stack (MongoDB, Express.js, React, Node.js) for showcasing landscape architecture projects and services offered by IIG-HEC. This platform features project portfolios, service information, blog posts, and contact capabilities, with a robust admin dashboard for content management.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **Responsive Design**: Fully mobile-responsive interface using TailwindCSS and DaisyUI
+- **Project Showcase**: Gallery of featured landscape architecture projects with detailed individual project pages
+- **Interactive UI**: Smooth animations and transitions using AOS (Animate On Scroll)
+- **Content Management System**: Comprehensive admin dashboard for:
+  - Creating, editing, and deleting projects
+  - Managing blog posts with rich text editor
+  - Uploading and organizing media content
+  - Controlling site content dynamically
+- **Blog/Posts Section**: Share news, insights, and information about landscape architecture
+- **Integrated Contact Form**: Easy way for potential clients to reach out
+- **Video Gallery**: Showcase of related video content
+- **Authentication**: Secure admin login using Firebase Authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **MERN Stack**:
+  - **MongoDB**: Database for storing projects, blog posts, and user data
+  - **Express.js**: Backend API framework
+  - **React**: Frontend UI library
+  - **Node.js**: JavaScript runtime for the backend
+- **Authentication**: Firebase Authentication for secure admin access
+- **Styling**: TailwindCSS, DaisyUI
+- **Animations**: AOS (Animate On Scroll)
+- **Content Editing**: TinyMCE React
+- **UI Components**:
+  - Swiper for carousels
+  - React Icons for iconography
+  - React Modal for modal dialogs
+  - React Quill for rich text editing
 
-### `npm test`
+## 📋 Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or higher)
+- npm or yarn
+- Firebase account (for deployment and backend services)
 
-### `npm run build`
+## 🚀 Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/yourusername/IIG-HEC-Website.git
+   cd IIG-HEC-Website
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Environment Variables**
+   Create a `.env` file in the root directory with your Firebase configuration:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   REACT_APP_FIREBASE_API_KEY=your_api_key
+   REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+   REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+   REACT_APP_FIREBASE_APP_ID=your_app_id
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
+   The site will be available at [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🏗️ Building for Production
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This creates an optimized production build in the `build` folder, ready for deployment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Deployment
 
-### Code Splitting
+### Firebase Hosting (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Install Firebase CLI:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm install -g firebase-tools
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Login to Firebase:
 
-### Making a Progressive Web App
+   ```bash
+   firebase login
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Initialize Firebase:
 
-### Advanced Configuration
+   ```bash
+   firebase init
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   - Select Hosting
+   - Select your Firebase project
+   - Set public directory to "build"
+   - Configure as a single-page app: "Yes"
 
-### Deployment
+4. Deploy to Firebase:
+   ```bash
+   firebase deploy
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧰 Project Structure
 
-### `npm run build` fails to minify
+```
+src/
+├── assets/        # Images, icons, and other static assets
+├── components/    # Reusable UI components
+├── pages/         # Page components organized by route
+│   ├── About/
+│   ├── Contact/
+│   ├── Home/
+│   ├── Login/
+│   ├── Posts/
+│   ├── Projects/
+│   └── Videos/
+├── firebase.js    # Firebase configuration and utilities
+├── App.js         # Main application component and routing
+└── index.js       # Application entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔧 Customization
+
+- **Theme**: Customize colors and styling in `tailwind.config.js`
+- **Content**: Manage content through the admin dashboard:
+  - Add, edit, or delete projects with images and descriptions
+  - Create and manage blog posts with the rich text editor
+  - Customize homepage content and featured projects
+- **Layout**: Modify components in the `components` directory
+
+---
+
+Built with ❤️ using React and Firebase.
